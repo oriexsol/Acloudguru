@@ -35,4 +35,5 @@ mkdir -p /etc/systemd/system/docker.service.d
 systemctl daemon-reload
 systemctl restart docker
 
-swapoff -a 
+sudo usermod -aG docker ${USER}
+newgrp docker
